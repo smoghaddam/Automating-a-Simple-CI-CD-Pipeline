@@ -12,7 +12,7 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch: # Manual trigger in case of emergency
+  workflow_dispatch: # This is a manual trigger in case of emergency
 
 jobs:
   test:
@@ -93,13 +93,13 @@ jobs:
       - name: Build static pages
         env:
           PATH_PREFIX: /${{ env.REPO_NAME }}/
-        run: npm run prod
+        run: npm run eleventy:prod
 
       - name: Upload built site
         uses: actions/upload-artifact@v3
         with:
           name: site
-          path: dist/
+          path: _site/
 
   deploy:
     runs-on: ubuntu-latest
