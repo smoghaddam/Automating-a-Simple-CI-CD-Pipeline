@@ -126,7 +126,7 @@ jobs:
           URL=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url')
               sed -i '19i\
               <meta http-equiv="refresh" content="0;URL='"$url"manual/'">
-              ' _site/index.html
+              ' ./_site/index.html
           gh issue create \
             --title "${DATE} - Deployment: ${STATUS}" \
             --body "URL: ${URL}" \
