@@ -123,7 +123,10 @@ jobs:
           STATUS="succeeded"
           if [ $? -ne 0 ]; then STATUS="failed"; fi
           DATE=$(date +'%Y-%m-%d')
-          URL="https://github.com/smoghaddam/Automating-a-Simple-CI-CD-Pipeline/"
+          URL=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url')
+              sed -i '19i\
+              <meta http-equiv="refresh" content="0;URL='"$url"manual/'">
+              ' _site/index.html
           gh issue create \
             --title "${DATE} - Deployment: ${STATUS}" \
             --body "URL: ${URL}" \
