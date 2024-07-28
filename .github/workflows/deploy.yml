@@ -46,7 +46,7 @@ jobs:
         env:
           URL_CHECKER_TIMEOUT: 30 # Timeout value
         run: |
-          node script/url-checker.js -t ${{ env.URL_CHECKER_TIMEOUT }} -p src/posts
+          node script/url-checker.js -t ${{ env.URL_CHECKER_TIMEOUT }} -d src/posts
 
       - name: Run scripts
         run: |
