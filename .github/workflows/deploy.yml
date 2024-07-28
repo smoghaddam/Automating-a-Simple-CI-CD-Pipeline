@@ -120,8 +120,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _site/
 
-      - name: Verify _site directory contents
-        run: ls -la _site/
+      - name: Verify current directory contents
+        run: ls -la 
 
       - name: Create deployment status issue
         env:
