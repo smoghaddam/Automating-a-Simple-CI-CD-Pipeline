@@ -94,12 +94,16 @@ jobs:
         env:
           PATH_PREFIX: /${{ env.REPO_NAME }}/
         run: npm run eleventy:prod
-
+    
       - name: Upload built site
         uses: actions/upload-artifact@v3
         with:
           name: site
           path: _site/
+
+      - name: List contents of _site directory
+        run: ls -la _site/
+ 
 
   deploy:
     runs-on: ubuntu-latest
@@ -109,6 +113,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: site
+          
+      - name: Verify _site directory contents
+        run: ls -la _site/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
