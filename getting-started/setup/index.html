@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="/Automating-a-Simple-CI-CD-Pipeline/js/theme-detection.js"></script>
+        <link rel="preload" as="font" type="font/woff2" href="/Automating-a-Simple-CI-CD-Pipeline/font/manrope-v14-latin-regular.woff2" crossorigin="">
+<link rel="preload" as="font" type="font/woff2" href="/Automating-a-Simple-CI-CD-Pipeline/font/manrope-v14-latin-600.woff2" crossorigin="">
+<link rel="preload" as="font" type="font/woff2" href="/Automating-a-Simple-CI-CD-Pipeline/font/manrope-v14-latin-800.woff2" crossorigin="">
+<link rel="preload" as="font" type="font/woff2" href="/Automating-a-Simple-CI-CD-Pipeline/font/open-sans-v35-latin-regular.woff2" crossorigin="">
+<link rel="preload" as="font" type="font/woff2" href="/Automating-a-Simple-CI-CD-Pipeline/font/open-sans-v35-latin-700.woff2" crossorigin="">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="alternate" type="application/rss+xml" href="/Automating-a-Simple-CI-CD-Pipeline/feed.xml">
+        
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+<title>Setup - CorpX Docs</title>
+<link rel="canonical" href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/setup/">
+
+<meta name="generator" content="Eleventy v2.0.1">
+
+<meta property="og:site_name" content="CorpX Docs">
+<meta property="og:title" content="Setup - CorpX Docs">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/getting-started/setup/">
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="/img/social-share.png">
+    <meta name="twitter:image" content="/img/social-share.png">
+    <meta property="og:image:alt" content="Page image for CorpX Docs">
+    <meta name="twitter:image:alt" content="Page image for CorpX Docs">
+
+
+
+    <meta name="description" content="We use eleventy --serve and compile Sass with sass-cli with npm scripts.">
+    <meta name="twitter:description" content="We use eleventy --serve and compile Sass with sass-cli with npm scripts.">
+    <meta property="og:description" content="We use eleventy --serve and compile Sass with sass-cli with npm scripts.">
+
+
+<link rel="icon" href="/Automating-a-Simple-CI-CD-Pipeline/img/favicon.svg" type="image/svg+xml">
+
+        <link rel="stylesheet" href="/Automating-a-Simple-CI-CD-Pipeline/css/main.css">
+    </head>
+    <body>
+        <div class="site-wrapper">
+            <a class="btn btn--primary skip-link" href="#content">Skip to content</a>
+            <div class="container container--wide">
+                <header class="header">
+    <div class="header__column">
+        <a class="header__logo" href="/Automating-a-Simple-CI-CD-Pipeline/" aria-label="CorpX Docs">
+            <img data-theme-mode="" data-light-asset="/Automating-a-Simple-CI-CD-Pipeline/img/corpx-logo.png" data-dark-asset="/Automating-a-Simple-CI-CD-Pipeline/img/corpx-logo-dark.png" src="/Automating-a-Simple-CI-CD-Pipeline/img/corpx-logo.png" alt="CorpX logo">
+       </a>
+        
+            <nav class="header__navigation">
+                <ul>
+                    
+                    <li>
+                        <a href="/Automating-a-Simple-CI-CD-Pipeline/changelog/">
+                            Changelog
+                            
+                        </a>
+                    </li>
+                    
+                </ul>
+            </nav>
+        
+        <button class="btn btn--primary btn--icon header__toggle" data-action="sidebar-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toogle navigation">
+            <svg aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor" width="24" height="24" class="btn__icon">
+    <path d="M24,19.6c0,-0.331 -0.269,-0.6 -0.6,-0.6l-20.8,0c-0.331,0 -0.6,0.269 -0.6,0.6l0,2.8c0,0.331 0.269,0.6 0.6,0.6l20.8,-0c0.331,-0 0.6,-0.269 0.6,-0.6l0,-2.8Zm0,-9c0,-0.331 -0.269,-0.6 -0.6,-0.6l-22.8,-0c-0.331,-0 -0.6,0.269 -0.6,0.6l0,2.8c0,0.331 0.269,0.6 0.6,0.6l22.8,-0c0.331,-0 0.6,-0.269 0.6,-0.6l0,-2.8Zm0,-9c0,-0.331 -0.269,-0.6 -0.6,-0.6l-15.8,-0c-0.331,-0 -0.6,0.269 -0.6,0.6l0,2.8c0,0.331 0.269,0.6 0.6,0.6l15.8,-0c0.331,-0 0.6,-0.269 0.6,-0.6l0,-2.8Z"></path>
+</svg>
+
+        </button>
+    </div>
+    <div class="header__actions">
+        <span class="open-search">
+    <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24" height="24" style="fill: currentColor" class="open-search__icon">
+    <path d="M19.501,9.75c-0,2.152 -0.699,4.14 -1.875,5.752l5.935,5.94c0.585,0.586 0.585,1.537 -0,2.123c-0.586,0.586 -1.538,0.586 -2.124,0l-5.935,-5.939c-1.612,1.181 -3.6,1.875 -5.752,1.875c-5.386,-0 -9.75,-4.364 -9.75,-9.751c0,-5.386 4.364,-9.75 9.75,-9.75c5.387,-0 9.751,4.364 9.751,9.75Zm-9.751,6.751c3.704,-0 6.751,-3.047 6.751,-6.751c-0,-3.703 -3.047,-6.75 -6.751,-6.75c-3.703,0 -6.75,3.047 -6.75,6.75c0,3.704 3.047,6.751 6.75,6.751Z"></path>
+</svg>
+
+    <span class="open-search__caption">Search</span>
+    <button class="btn btn--outline-primary btn--sm open-search__btn" data-action="open-search">
+        Ctrl K
+    </button>
+</span>
+
+        <div class="theme-switcher" id="theme-switcher">
+    <button class="btn btn--outline-primary btn--sm btn--icon theme-switcher__system-mode" aria-label="Switch to light mode" data-action="light">
+        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24" height="24" style="fill: currentColor" class="btn__icon">
+    <path d="M21,12c0,-4.969 -4.031,-9 -9,-9l0,18c4.969,0 9,-4.031 9,-9Zm3,0c0,6.628 -5.372,12 -12,12c-6.628,0 -12,-5.372 -12,-12c0,-6.628 5.372,-12 12,-12c6.628,0 12,5.372 12,12Z"></path>
+</svg>
+
+    </button>
+    <button class="btn btn--outline-primary btn--sm btn--icon theme-switcher__light-mode" aria-label="Switch to dark mode" data-action="dark">
+        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24" height="24" style="fill: currentColor" class="btn__icon">
+    <path d="M5.509,3.917l-0.425,-0.426c-0.426,-0.425 -1.113,-0.415 -1.528,0l-0.01,0.011c-0.426,0.425 -0.426,1.113 -0,1.527l0.425,0.426c0.426,0.425 1.102,0.425 1.527,-0l0.011,-0.011c0.426,-0.415 0.426,-1.113 0,-1.527Zm-3.316,6.938l-1.113,-0c-0.6,-0 -1.08,0.48 -1.08,1.08l-0,0.011c-0,0.6 0.48,1.08 1.08,1.08l1.102,-0c0.611,0.011 1.091,-0.469 1.091,-1.069l-0,-0.011c-0,-0.611 -0.48,-1.091 -1.08,-1.091Zm9.818,-10.855l-0.011,-0c-0.61,-0 -1.09,0.48 -1.09,1.08l-0,1.047c-0,0.6 0.48,1.08 1.08,1.08l0.01,0c0.611,0.011 1.091,-0.469 1.091,-1.069l0,-1.058c0,-0.6 -0.48,-1.08 -1.08,-1.08Zm8.444,3.502c-0.425,-0.426 -1.112,-0.426 -1.538,-0.011l-0.425,0.426c-0.426,0.425 -0.426,1.112 -0,1.527l0.011,0.011c0.425,0.425 1.112,0.425 1.527,-0l0.425,-0.426c0.426,-0.425 0.426,-1.102 0,-1.527Zm-1.974,16.473l0.425,0.426c0.426,0.425 1.113,0.425 1.538,-0c0.426,-0.426 0.426,-1.113 0,-1.538l-0.425,-0.426c-0.426,-0.425 -1.113,-0.414 -1.527,0c-0.437,0.436 -0.437,1.113 -0.011,1.538Zm2.247,-8.04l0,0.011c0,0.6 0.48,1.08 1.08,1.08l1.102,-0c0.6,-0 1.08,-0.48 1.08,-1.08l-0,-0.011c-0,-0.6 -0.48,-1.08 -1.08,-1.08l-1.102,-0c-0.6,-0 -1.08,0.48 -1.08,1.08Zm-8.728,-6.535c-3.611,0 -6.545,2.935 -6.545,6.546c-0,3.611 2.934,6.546 6.545,6.546c3.612,-0 6.546,-2.935 6.546,-6.546c0,-3.611 -2.934,-6.546 -6.546,-6.546Zm-0.01,18.492l0.01,-0c0.6,-0 1.08,-0.48 1.08,-1.08l0,-1.048c0,-0.6 -0.48,-1.08 -1.08,-1.08l-0.01,0c-0.6,0 -1.08,0.48 -1.08,1.08l-0,1.048c-0,0.6 0.48,1.08 1.08,1.08Zm-8.444,-3.502c0.425,0.425 1.112,0.425 1.538,-0l0.425,-0.426c0.426,-0.425 0.415,-1.112 0,-1.527l-0.011,-0.011c-0.425,-0.425 -1.112,-0.425 -1.538,0l-0.425,0.426c-0.415,0.436 -0.415,1.112 0.011,1.538Z"></path>
+</svg>
+
+    </button>
+    <button class="btn btn--outline-primary btn--sm btn--icon theme-switcher__dark-mode" aria-label="Switch to system mode" data-action="system">
+        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24" height="24" style="fill: currentColor" class="btn__icon">
+    <path d="M13.684,-0c-6.616,-0 -11.974,5.373 -11.974,12c0,6.627 5.358,12 11.974,12c3.246,0 6.187,-1.296 8.346,-3.396c0.268,-0.263 0.338,-0.67 0.166,-1.002c-0.171,-0.332 -0.541,-0.52 -0.911,-0.456c-0.525,0.092 -1.06,0.14 -1.612,0.14c-5.191,-0 -9.402,-4.222 -9.402,-9.429c0,-3.525 1.929,-6.595 4.784,-8.212c0.327,-0.188 0.493,-0.563 0.413,-0.927c-0.081,-0.364 -0.392,-0.638 -0.767,-0.67c-0.337,-0.027 -0.675,-0.043 -1.017,-0.043l-0,-0.005Z"></path>
+</svg>
+
+    </button>
+</div>
+
+        <div class="header__socials">
+            
+            
+            
+        </div>
+    </div>
+</header>
+
+                <div class="l-main">
+                    <aside class="sidebar l-main__sidebar">
+    <div class="sidebar__body">
+        
+            <div class="sidebar-section sidebar-section--navigation">
+                <h3 class="sidebar-section__title">Navigation</h3>
+                <nav class="sidebar-section__navigation">
+                    <ul>
+                        
+                        <li>
+                            <a href="/Automating-a-Simple-CI-CD-Pipeline/changelog/">
+                                Changelog
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        
+
+        
+        
+            <div class="sidebar-section">
+                <h3 class="sidebar-section__title">Getting Started</h3>
+                <nav class="sidebar-section__navigation">
+                    <ul>
+                        
+                            <li><a href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/introduction/">Introduction</a></li>
+                        
+                            <li><a href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/features/">Features</a></li>
+                        
+                            <li><a href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/structure/">Structure</a></li>
+                        
+                            <li><a href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/setup/" aria-current="page" data-state="active">Setup</a></li>
+                        
+                            <li><a href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/content-management/">Content Management</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        
+            <div class="sidebar-section">
+                <h3 class="sidebar-section__title">Contribute</h3>
+                <nav class="sidebar-section__navigation">
+                    <ul>
+                        
+                            <li><a href="/Automating-a-Simple-CI-CD-Pipeline/contribute/introduction/">Introduction</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        
+    </div>
+    <div class="sidebar__footer">
+        © 2024 - Some rights reserved.
+    </div>
+</aside>
+
+                    <div class="l-main__body">
+                        <main id="content">
+    <article class="l-post" data-pagefind-body="">
+        
+        <div class="post-heading">
+    
+    
+        <ol class="breadcrumb-list post-heading__breadcrumb">
+    <li>
+        <a href="/Automating-a-Simple-CI-CD-Pipeline/">Home</a>
+    </li>
+        <li>
+            
+                <a href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/">Getting Started</a>
+            
+        </li>
+        <li>
+            
+                <span aria-current="page">Setup</span>
+            
+        </li>
+</ol>
+
+    
+    
+        <h1 class="post-heading__title">
+            Setup
+        </h1>
+    
+    
+    
+</div>
+
+        
+        <div class="l-post__toc toc" aria-labelledby="toc-title">
+            <section class="toc" aria-labelledby="toc-title">
+                <h3 class="toc__title" id="toc-title">On this page</h3>
+                <nav class="toc__navigation"><nav class="toc">
+        <ol><li><a href="#clone-the-repository">Clone the repository</a></li><li><a href="#install-the-dependencies">Install the dependencies</a></li><li><a href="#run-the-development-mode">Run the development mode</a></li><li><a href="#run-the-production-mode">Run the production mode</a></li><li><a href="#additional-scripts">Additional Scripts</a></li></ol>
+      </nav></nav>
+            </section>
+        </div>
+        
+        <div class="l-post__content post-content">
+            <h2 id="clone-the-repository" tabindex="-1">Clone the repository <a class="anchor" href="#clone-the-repository">#</a></h2>
+<p>Today more people and experts write about accessibility. For the better progression it is a good idea to read them.</p>
+<h2 id="install-the-dependencies" tabindex="-1">Install the dependencies <a class="anchor" href="#install-the-dependencies">#</a></h2>
+<p>In the <code>package.json</code> file, you will find all of the dependencies (and scripts) to install them using the following command:</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span></code></pre>
+<h2 id="run-the-development-mode" tabindex="-1">Run the development mode <a class="anchor" href="#run-the-development-mode">#</a></h2>
+<p>To run the development mode, use the <code>npm script</code>.   This script will also watch for changes.</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> start</code></pre>
+<h2 id="run-the-production-mode" tabindex="-1">Run the production mode <a class="anchor" href="#run-the-production-mode">#</a></h2>
+<p>Before you go live, you should use the production script to compress the Sass files.</p>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> run prod</code></pre>
+<h2 id="additional-scripts" tabindex="-1">Additional Scripts <a class="anchor" href="#additional-scripts">#</a></h2>
+<p>You can find some more npm scripts in the <a href="https://github.com/conedevelopment/sprucecss-eleventy-documentation-template/blob/main/package.json">package.json</a> that can be helpful.</p>
+
+        </div>
+    </article>
+    
+
+
+<nav class="post-navigation">
+    
+        <a class="post-navigation-item post-navigation-item--prev" href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/structure/">
+            <span class="post-navigation-item__icon">
+                <svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;fill:currentColor;" class="icon">
+    <path d="M22.46,10.468l-17.204,-0l7.516,-7.517c0.601,-0.6 0.601,-1.586 0,-2.187c-0.601,-0.6 -1.571,-0.6 -2.172,0l-10.149,10.15c-0.601,0.601 -0.601,1.571 -0,2.172l10.149,10.15c0.601,0.6 1.571,0.6 2.172,-0c0.601,-0.601 0.601,-1.571 0,-2.172l-7.516,-7.516l17.204,-0c0.847,-0 1.54,-0.693 1.54,-1.54c0,-0.847 -0.693,-1.54 -1.54,-1.54Z"></path>
+</svg>
+
+            </span>
+            <span class="post-navigation-item__caption">
+                Previous
+                <span class="post-navigation-item__title">Structure</span>
+            </span>
+        </a>
+    
+    
+        <a class="post-navigation-item post-navigation-item--next" href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/content-management/">
+            <span class="post-navigation-item__caption">
+                Next
+                <span class="post-navigation-item__title">Content Management</span>
+            </span>
+            <span class="post-navigation-item__icon">
+                <svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;fill:currentColor;" class="icon">
+    <path d="M1.54,13.532l17.204,0l-7.516,7.517c-0.601,0.6 -0.601,1.586 -0,2.187c0.601,0.6 1.571,0.6 2.172,-0l10.149,-10.15c0.601,-0.601 0.601,-1.571 0,-2.172l-10.149,-10.15c-0.601,-0.6 -1.571,-0.6 -2.172,0c-0.601,0.601 -0.601,1.571 -0,2.172l7.516,7.516l-17.204,0c-0.847,0 -1.54,0.693 -1.54,1.54c0,0.847 0.693,1.54 1.54,1.54Z"></path>
+</svg>
+
+            </span></a>
+    
+</nav>
+
+</main>
+                        <footer class="footer">
+    <div class="footer__inner">
+        
+        <div class="footer__column">
+            <h3 class="footer__title" id="footer-title-getting-started">
+                Getting Started
+            </h3>
+            <ul class="footer__navigation" aria-labelledby="footer-title-getting-started">
+                
+                <li>
+                    <a href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/introduction/">
+                        Introduction
+                        
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/features/">
+                        Features
+                        
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/structure/">
+                        Structure
+                        
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/Automating-a-Simple-CI-CD-Pipeline/getting-started/setup/" aria-current="page" data-state="active">
+                        Setup
+                        
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        
+        <div class="footer__column">
+            <h3 class="footer__title" id="footer-title-github-actions">
+                GitHub Actions
+            </h3>
+            <ul class="footer__navigation" aria-labelledby="footer-title-github-actions">
+                
+                <li>
+                    <a href="https://docs.github.com/en/actions" target="_blank" rel="noopener">
+                        Docs
+                        
+                            <span class="sr-only">Open in new window</span>
+                            <svg aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor" width="24" height="24" class="btn__icon">
+    <path d="M1.111,1.907c0,1.049 0.858,1.908 1.907,1.908l14.478,-0l-16.938,16.938c-0.744,0.744 -0.744,1.945 -0,2.689c0.744,0.744 1.945,0.744 2.689,0l16.938,-16.938l0,14.478c0,1.049 0.859,1.907 1.908,1.907c1.049,-0 1.907,-0.858 1.907,-1.907l0,-19.075c0,-1.049 -0.858,-1.907 -1.907,-1.907l-19.075,0c-1.049,0 -1.907,0.858 -1.907,1.907Z"></path>
+</svg>
+
+                        
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        
+        <div class="footer__column">
+            <h3 class="footer__title" id="footer-title-more-udacity-courses">
+                More Udacity Courses
+            </h3>
+            <ul class="footer__navigation" aria-labelledby="footer-title-more-udacity-courses">
+                
+                <li>
+                    <a href="https://www.udacity.com/" target="_blank" rel="noopener">
+                        Courses
+                        
+                            <span class="sr-only">Open in new window</span>
+                            <svg aria-hidden="true" focusable="false" role="img" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor" width="24" height="24" class="btn__icon">
+    <path d="M1.111,1.907c0,1.049 0.858,1.908 1.907,1.908l14.478,-0l-16.938,16.938c-0.744,0.744 -0.744,1.945 -0,2.689c0.744,0.744 1.945,0.744 2.689,0l16.938,-16.938l0,14.478c0,1.049 0.859,1.907 1.908,1.907c1.049,-0 1.907,-0.858 1.907,-1.907l0,-19.075c0,-1.049 -0.858,-1.907 -1.907,-1.907l-19.075,0c-1.049,0 -1.907,0.858 -1.907,1.907Z"></path>
+</svg>
+
+                        
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</footer>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop">
+    <div class="modal" role="dialog" aria-modal="true">
+        <div id="search" class="search"></div>
+    </div>
+</div>
+
+<script src="/Automating-a-Simple-CI-CD-Pipeline/_pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
+
+
+        <script src="/Automating-a-Simple-CI-CD-Pipeline/js/theme-change-assets.js" defer=""></script>
+        <script src="/Automating-a-Simple-CI-CD-Pipeline/js/navigation.js" defer=""></script>
+        <script src="/Automating-a-Simple-CI-CD-Pipeline/js/theme-switcher.js" defer=""></script>
+        <script src="/Automating-a-Simple-CI-CD-Pipeline/js/modal.js" defer=""></script>
+        <script src="/Automating-a-Simple-CI-CD-Pipeline/js/accordion-card.js" defer=""></script>
+    </body>
+</html>
