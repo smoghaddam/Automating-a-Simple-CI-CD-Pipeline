@@ -134,7 +134,7 @@ jobs:
           sudo apt install gh    
 
       - name: Configure GitHub CLI
-        run: gh auth login --with-token < ${{ secrets.GITHUB_TOKEN }}
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
 
       - name: Create deployment status issue
         env:
