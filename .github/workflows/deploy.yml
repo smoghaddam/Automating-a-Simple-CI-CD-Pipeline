@@ -123,7 +123,7 @@ jobs:
           STATUS="succeeded"
           if [ $? -ne 0 ]; then STATUS="failed"; fi
           DATE=$(date +'%Y-%m-%d')
-          URL="https://github.com/smoghaddam/Automating-a-Simple-CI-CD-Pipeline/tree/gh-pages"
+          URL="https://github.com/smoghaddam/Automating-a-Simple-CI-CD-Pipeline/"
           gh issue create \
             --title "${DATE} - Deployment: ${STATUS}" \
             --body "URL: ${URL}" \
