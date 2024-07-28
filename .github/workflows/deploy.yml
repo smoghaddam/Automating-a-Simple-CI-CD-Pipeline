@@ -109,6 +109,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Download built site
         uses: actions/download-artifact@v3
         with:
@@ -123,6 +126,9 @@ jobs:
 
       - name: Verify _site directory contents
         run: ls -la _site/
+
+      - name: Configure GitHub CLI
+        run: gh auth login --with-token < ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create deployment status issue
         env:
