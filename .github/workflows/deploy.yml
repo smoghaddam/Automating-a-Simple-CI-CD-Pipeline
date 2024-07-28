@@ -113,15 +113,15 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: site
-          
-      - name: Verify _site directory contents
-        run: ls -la _site/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _site/
+
+      - name: Verify _site directory contents
+        run: ls -la _site/
 
       - name: Create deployment status issue
         env:
