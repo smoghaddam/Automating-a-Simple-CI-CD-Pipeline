@@ -127,6 +127,11 @@ jobs:
       - name: Verify _site directory contents
         run: ls -la _site/
 
+      - name: Install GitHub CLI
+        run: |
+        sudo apt update
+        sudo apt install gh    
+
       - name: Configure GitHub CLI
         run: gh auth login --with-token < ${{ secrets.GITHUB_TOKEN }}
 
